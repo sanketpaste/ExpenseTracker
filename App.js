@@ -8,6 +8,7 @@ import ManageExpense from './src/screens/ManageExpense';
 import {GlobalStyles} from './src/constants/styles';
 import Fontawesome5 from '@react-native-vector-icons/fontawesome5';
 
+
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
 
