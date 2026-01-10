@@ -39,7 +39,7 @@ function ExpensesOverview() {
         name="RecentExpenses"
         component={RecentExpenses}
         options={{
-          title: 'Recent Expenses',
+          title: 'Recent',
           tabBarLabel: 'Recent',
           tabBarIcon: ({color, size}) => (
             <Fontawesome5 name="hourglass" color={color} size={size} />
