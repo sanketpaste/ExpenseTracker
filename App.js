@@ -12,6 +12,7 @@ import ExpensesContextProvider from './src/store/expenses-context';
 
 // Sanket paste...added
 
+
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
 
