@@ -11,7 +11,7 @@ const Input =({lable,textInputConfig})=>{
         <View style={styles.inputContainer}>
             <Text style={styles.lable}>{lable}</Text>
             <TextInput style={styles.input} {...textInputConfig}/>
-        </View>
+        </View> 
     )
 }
 

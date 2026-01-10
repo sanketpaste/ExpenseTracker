@@ -10,7 +10,7 @@ import Fontawesome5 from '@react-native-vector-icons/fontawesome5';
 import IconButton from './src/UI/IconButton';
 import ExpensesContextProvider from './src/store/expenses-context';
 
-// Sanket paste 
+// Sanket paste...added
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
