@@ -20,6 +20,11 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
       - name: Install Node dependencies
         run: npm install
 
@@ -27,10 +32,13 @@ jobs:
         run: chmod +x gradlew
         working-directory: android
 
+      - name: Accept Android SDK licenses
+        run: yes | sdkmanager --licenses
+
       - name: Build Signed Release APK
         working-directory: android
         env:
-          KEYSTORE_PATH: android/app/release-key.jks
+          KEYSTORE_PATH: app/release-key.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: release-key-alias
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
@@ -40,4 +48,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dev-signed-release-apk
-          path: app/build/outputs/apk/release/*.apk
+          path: android/app/build/outputs/apk/release/*.apk
