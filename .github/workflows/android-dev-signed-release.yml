@@ -32,9 +32,6 @@ jobs:
         run: chmod +x gradlew
         working-directory: android
 
-      - name: Accept Android SDK licenses
-        run: yes | sdkmanager --licenses
-
       - name: Build Signed Release APK
         working-directory: android
         env:
